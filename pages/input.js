@@ -88,7 +88,7 @@ function Add ({props}){
           <input type="file" onChange={(e) => setImg(e.target.files[0])} />
         </div>
         <div className="px-3 py-1">
-        <button  onClick={handleImage} className="bg-[#46391e] px-1 py-1 text-white  hover:bg-[#f5eddc] hover:text-black">
+        <button  onClick={handleImage} className="bg-[#46391e] px-3 py-1 text-white  hover:bg-[#f5eddc] hover:text-black">
           Create
         </button>
         </div>
@@ -149,7 +149,7 @@ function Add ({props}){
         </div>
         <form method="POST" >
         <div className="px-3 py-1"> 
-        <button  type="submit" className="bg-[#46391e] px-1 py-1 text-white  hover:bg-[#f5eddc] hover:text-black">
+        <button  type="submit" className="bg-[#46391e] px-3 py-1 text-white  hover:bg-[#f5eddc] hover:text-black">
           Create
         </button>
         </div>
