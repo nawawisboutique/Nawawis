@@ -79,7 +79,8 @@ function Add ({props}){
   }
 
   return (
-    <div className="flex flex-row">
+    <div className="bg-[url('/images/12.webp')]">
+          <div className="flex flex-row">
       <div className="flex-initial w-1/2" >
         <h1>Add a new Product</h1>
         <div className="px-3 py-3">
@@ -98,7 +99,7 @@ function Add ({props}){
             onChange={(e) => setNameProduct(e.target.value)}
           />
         </div>
-        <div className="px-3 py-3">
+        <div className="px-3 py-6">
           <label>Description :</label>
           <textarea
           className="border-2"
@@ -145,6 +146,7 @@ function Add ({props}){
            onChange={(e) => setType(e.target.value)}
          />
         </div>
+        <br></br>
         <form method="POST" >
 
         <button  type="submit" className="bg-[#46391e] px-1 py-1 text-white  hover:bg-[#f5eddc] hover:text-black">
@@ -162,7 +164,9 @@ function Add ({props}){
         </form>
       </div>
       <Slider/>
+    </div>  
     </div>
+
     
   );
 };

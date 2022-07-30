@@ -3,13 +3,13 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper';
-import Link from 'next/link';
+
 import dataSlider from './slider.json';
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 const Slider = () => {
   return (
     <Swiper
-      spaceBetween={30}
+      spaceBetween={20}
       centeredSlides={true}
       autoplay={{
         delay: 2500,
@@ -19,7 +19,7 @@ const Slider = () => {
         clickable: true,
       }}
       loop={true}
-      className="slider h-70 md:h-100 w-1/4 my-auto"
+      className="slider h-100 md:h-100 w-100 my-auto"
     >
       {dataSlider.map((slide) => (
         <SwiperSlide key={slide.id}>
