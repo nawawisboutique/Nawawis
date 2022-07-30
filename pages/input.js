@@ -82,76 +82,77 @@ function Add ({props}){
     <div className="bg-[url('/images/12.webp')]">
           <div className="flex flex-row">
       <div className="flex-initial w-1/2" >
-        <h1>Add a new Product</h1>
-        <div className="px-3 py-3">
+        <h1 className="px-3">Add a new Product</h1>
+        <div className="px-3 py-1">
           <label >Choose an image </label><br></br>
           <input type="file" onChange={(e) => setImg(e.target.files[0])} />
         </div>
+        <div className="px-3 py-1">
         <button  onClick={handleImage} className="bg-[#46391e] px-1 py-1 text-white  hover:bg-[#f5eddc] hover:text-black">
           Create
         </button>
-
+        </div>
         <div  className="px-3 py-3">
           <label >Product : </label>
           <input
-           className="border-2"
+           className="border-1"
             type="text"
             onChange={(e) => setNameProduct(e.target.value)}
           />
         </div>
-        <div className="px-3 py-6">
-          <label>Description :</label>
+        <div className="px-3 py-10">
+          <label>Description : </label>
           <textarea
-          className="border-2"
-            rows={4}
-            type="text"
-            onChange={(e) => setDesc(e.target.value)}
-          />
+              className="border-1"
+              rows={5}
+              type="text"
+              onChange={(e) => setDesc(e.target.value)}
+            />
         </div>
         <div className="px-3 py-3">
           <label >Prices :</label>
-          <div className="px-3 py-3">
+          <div className="py-1">
             <input
-              className="border-2"
+              className="border-1"
               type="number"
               placeholder="S"
               onChange={(e) => changePrice(e, 0)}
             />
             <input
-            className="border-2"
+            className="border-1"
               type="number"
               placeholder="M"
               onChange={(e) => changePrice(e, 1)}
             />
             <br></br>
             <input
-           className="border-2"
+           className="border-1"
               type="number"
               placeholder="L"
               onChange={(e) => changePrice(e, 2)}
             />
             <input
-              className="border-2"
+              className="border-1"
               type="number"
               placeholder="XL"
               onChange={(e) => changePrice(e, 3)}
             />
           </div>
         </div>
-        <div className="px-3 py-3">
-          <label>Type</label>
+        <div className="px-3 py-5">
+          <label>Type : </label>
           <input
-           className="border-2"
+           className="border-1"
            type="text"
            onChange={(e) => setType(e.target.value)}
-         />
+          />
         </div>
-        <br></br>
         <form method="POST" >
-
+        <div className="px-3 py-1"> 
         <button  type="submit" className="bg-[#46391e] px-1 py-1 text-white  hover:bg-[#f5eddc] hover:text-black">
           Create
         </button>
+        </div>
         <input className="opacity-0" name="name_product" defaultValue={props.name_product = name_product}  readOnly="readonly"/>
         <input className="opacity-0" name="desc" defaultValue={props.desc = desc}  readOnly="readonly"/>
         <input className="opacity-0" name="price0" defaultValue={props.price0 = price[0]}  readOnly="readonly"/>
